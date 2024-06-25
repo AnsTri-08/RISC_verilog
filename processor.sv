@@ -104,16 +104,15 @@ module processor (
     input wire clk,
     input wire rst,
     input wire [15:0] instruction,
-    output wire [15:0] result
+    output wire [15:0] result,
+    output wire mem_read,
+    output wire mem_write
 );
     wire [2:0] read_reg1, read_reg2, write_reg;
     wire [15:0] read_data1, read_data2, write_data;
     wire reg_write;
     wire [3:0] alu_control;
   
-    wire mem_read;
-    wire mem_write;
-
     assign read_reg1 = instruction[11:9];
     assign read_reg2 = instruction[8:6];
     assign write_reg = instruction[5:3];
