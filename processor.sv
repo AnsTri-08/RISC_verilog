@@ -102,7 +102,6 @@ endmodule
 
 module processor (
     input wire clk,
-    input wire rst,
     input wire [15:0] instruction,
     output wire [15:0] result,
     output wire mem_read,
